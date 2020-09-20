@@ -35,13 +35,14 @@ def approxEntropy(N, p):
       N = 10 => approxEntropy(10, 0,5) = 2.696663338227331
       N = 100 => approxEntropy(100, 0.5) = 4.369011409223017
       N = 1020 => approxEntropy(1020, 0.5) = 6.044272187826667
-      => Giá trị tiến đến 6.044
+      => Giá trị tiến đến 6.044272187826667
     '''
     result = 0
     for i in range(0, N):
         result += prob(i, p, N) * infoMeasure(i, p, N)
     return result
 
+#dùng để tính giá trị ví dụ bên trên
 print(approxEntropy(5,0.5))
 print(approxEntropy(10,0.5))
 print(approxEntropy(100,0.5))
